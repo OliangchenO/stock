@@ -4,6 +4,7 @@ DROP TABLE IF EXISTS user;
 CREATE TABLE user (
 	`id` BIGINT(20) NOT NULL AUTO_INCREMENT COMMENT '主键ID',
 	`user_id` BIGINT(20) NOT NULL DEFAULT 0 COMMENT '用户id',
+	`usr_id` BIGINT(20) NOT NULL DEFAULT 0 COMMENT 'usrId',
 	`user_name` VARCHAR(50) NOT NULL DEFAULT '' COMMENT '用户名',
 	`grade` VARCHAR(10) NOT NULL DEFAULT '' COMMENT '段位',
 	`total_gain` DECIMAL(15,2) NOT NULL DEFAULT 0.00 COMMENT '总盈利',
@@ -16,10 +17,11 @@ CREATE TABLE user (
 	`trade_info` VARCHAR(20)  NOT NULL DEFAULT '' COMMENT '今日动态',
 	`type` VARCHAR(10)  NOT NULL DEFAULT '' COMMENT '类型',
 	`rank` INT(5) NOT NULL DEFAULT 0 COMMENT '排名',
+	`have_stock` TINYINT(1) NOT NULL DEFAULT 0 COMMENT '是否空仓 0:不是，1:是',
 	`add_time` DATETIME NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '添加时间',
 	`modify_time` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 	PRIMARY KEY (`id`),
-    INDEX IDX_USER_ID(user_id),
+    UNIQUE UNQ_USER_ID(user_id),
 	INDEX IDX_ADD_TIME(`add_time`),
 	INDEX IDX_MODIFY_TIME(`modify_time`)
 ) COMMENT='用户信息';
@@ -35,9 +37,9 @@ CREATE TABLE user_stock_info (
     `buy_time` DATETIME NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '买入时间',
     `cost` DECIMAL (10, 2) NOT NULL DEFAULT 0.00 COMMENT '成本',
     `current_price` DECIMAL (10, 2) NOT NULL DEFAULT 0.00 COMMENT '现价',
-    `today_increase` DECIMAL (5, 2) NOT NULL DEFAULT 0.00 COMMENT '今日涨幅',
+    `today_increase` DECIMAL (10, 2) NOT NULL DEFAULT 0.00 COMMENT '今日涨幅',
     `market_value` DECIMAL (18, 2) NOT NULL DEFAULT 0.00 COMMENT '持仓市值',
-    `increase_rate` DECIMAL (5, 2) NOT NULL DEFAULT 0.00 COMMENT '盈亏率',
+    `increase_rate` DECIMAL (10, 2) NOT NULL DEFAULT 0.00 COMMENT '盈亏率',
     `floating_profit` DECIMAL (18, 2) NOT NULL DEFAULT 0.00 COMMENT '浮动盈亏',
     `deleted` TINYINT(1) NOT NULL DEFAULT 0 COMMENT '是否有效 0:有效，1:无效',
     `add_time` DATETIME NOT NULL DEFAULT '2000-01-01 00:00:00' COMMENT '添加时间',
