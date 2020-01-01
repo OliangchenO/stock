@@ -1,4 +1,4 @@
-package com.cenyol.mybatisplus.common.config;
+package com.liachen.common.config;
 
 import com.baomidou.mybatisplus.extension.plugins.PaginationInterceptor;
 import org.mybatis.spring.annotation.MapperScan;
@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @Configuration
 @EnableTransactionManagement
-@MapperScan( value = {"com.cenyol.mybatisplus.api.mapper"} )
+@MapperScan( value = {"com.liachen.stock.mapper"} )
 public class MybatisPlusConfig {
 
     /**

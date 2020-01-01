@@ -1,4 +1,4 @@
-package com.cenyol.mybatisplus;
+package com.liachen;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -13,10 +13,10 @@ import java.util.Date;
  */
 @Controller
 @SpringBootApplication
-public class MybatisPlusApplication {
+public class Application {
 
     public static void main(String[] args) {
-        SpringApplication.run(MybatisPlusApplication.class, args);
+        SpringApplication.run(Application.class, args);
     }
 
     @RequestMapping("/")

@@ -1,4 +1,4 @@
-package com.cenyol.mybatisplus.common;
+package com.liachen.stock.common;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

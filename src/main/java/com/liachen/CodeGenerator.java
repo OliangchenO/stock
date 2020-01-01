@@ -1,4 +1,4 @@
-package com.cenyol.mybatisplus;
+package com.liachen;
 
 import com.baomidou.mybatisplus.core.exceptions.MybatisPlusException;
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
@@ -25,8 +25,8 @@ import java.util.Scanner;
 public class CodeGenerator {
 
     private final static String APP_PROPERTY = "application.properties";
-    private final static String AUTHOR = "Cenyol";
-    private final static String BASE_PACKAGE = "com.cenyol.mybatisplus";
+    private final static String AUTHOR = "Liachen";
+    private final static String BASE_PACKAGE = "com.liachen";
 
     public static void main(String[] args) {
         // 代码生成器

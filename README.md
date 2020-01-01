@@ -17,7 +17,7 @@
 
 ### Code Generator 用法
 
-运行 com.cenyol.mybatisplus.CodeGenerator，然后输入表名即可。
+运行 CodeGenerator，然后输入表名即可。
 会自动生成相应的 Controller、Entity、Mapper、Service 及其 Impl 等常用模板代码。
 
 同时，由于已经封装好 CurdController，在生成的时候配置其为 Controller 父类，可以直接继承常用的 Curd 等方法，进一步简化代码。
@@ -42,12 +42,12 @@ git clone https://github.com/Cenyol/SpringMVC.git
 
 3. 运行Code Generator
 ```bash
-run com.cenyol.mybatisplus.CodeGenerator.main();
+run CodeGenerator.main();
 ```
 
 4. 配置 mapper interface 路径
 ```bash
-com.cenyol.mybatisplus.common.config.MybatisPlusConfig
+MybatisPlusConfig
 @MapperScan
 ```
 

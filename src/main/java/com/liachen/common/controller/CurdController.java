@@ -1,4 +1,4 @@
-package com.cenyol.mybatisplus.common.controller;
+package com.liachen.common.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
