@@ -111,6 +111,6 @@ public class THSExtServiceImpl implements THSExtService {
         BigDecimal successRate = new BigDecimal(StringUtils.removeEnd(element.select("td:nth-child(8) > p").first().text(), "%"));
         BigDecimal totalAssets = new BigDecimal(element.select("td:nth-child(9) > p").first().text());
         Long follow = Long.valueOf(element.select("td:nth-child(10) > p").first().text());
-        return new User().setType(type).setUserId(Long.valueOf(userId)).setUsrId(Long.valueOf(usrId)).setUserName(userName).setRank(rank).setGrade(grade).setTotalGain(totalGain).setMonthGain(monthGain).setWeekGain(weekGain).setDailyGain(dailyGain).setSuccessRate(successRate).setTotalAssets(totalAssets).setFollow(follow).setTradeInfo(tradeInfo).setAddTime(new Date()).setNoStock(0);
+        return new User().setType(type).setUserId(Long.valueOf(userId)).setUsrId(Long.valueOf(usrId)).setUserName(userName).setRankNo(rank).setGrade(grade).setTotalGain(totalGain).setMonthGain(monthGain).setWeekGain(weekGain).setDailyGain(dailyGain).setSuccessRate(successRate).setTotalAssets(totalAssets).setFollow(follow).setTradeInfo(tradeInfo).setAddTime(new Date()).setNoStock(0);
     }
 }
